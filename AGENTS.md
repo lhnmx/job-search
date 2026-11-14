@@ -23,6 +23,7 @@ Before editing, identify which of these the user is requesting:
 1. A change to the comprehensive reference in `master/resume.md`.
 2. A change to an existing tailored version (only when the user explicitly points to a specific file or folder).
 3. A new tailored version for a job, company, or discipline.
+4. Discovering or scraping a job/internship posting with Firecrawl and staging it into `applications/<company-role>/job_description.md` (see `scripts/fetch_job.py` and `.agents/skills/find-jobs/SKILL.md`).
 
 Do not treat these as interchangeable.
 

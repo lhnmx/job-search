@@ -85,7 +85,24 @@ pre-made/
 
 Formatting templates live in `templates/`. Add or adapt a layout there if you want a different visual style.
 
-### 4. Tailor for a job
+### 4. Find jobs & internships (optional)
+
+Discover and verify current openings directly using Firecrawl, with automatic daily deduplication against your Google Sheet:
+
+```bash
+# Sync today's applied jobs from your Google Sheet (saves daily snapshot locally):
+uv run python scripts/applied_jobs.py --sync
+
+# Search for active roles (automatically flags roles you've applied to):
+uv run python scripts/fetch_job.py --search "software engineering intern summer 2025" --limit 5
+
+# Scrape an official posting and stage it into an application workspace:
+uv run python scripts/fetch_job.py "<posting-url>" --company "<company>" --role "<role>"
+```
+
+This verifies that the position is open and saves the clean markdown to `applications/<company-role>/job_description.md`. You can also load `.agents/skills/find-jobs/SKILL.md` in your assistant.
+
+### 5. Tailor for a job
 
 Open the repository in your preferred assistant and ask:
 
